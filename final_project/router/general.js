@@ -58,10 +58,5 @@ public_users.get('/review/:isbn',function (req, res) {
     }catch{}
     res.send((reviews==[])?[]:{'reviews':reviews,'count':reviews.length} );
 });
-regd_users.delete("/auth/review/:isbn", (req, res) => {
-  // get username and password from request body
-  const isbn = parseInt(req.body['isbn']);
-  delete books[isbn];
-  res.end();
-});
+
 module.exports.general = public_users;
